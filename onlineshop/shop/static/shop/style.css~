@@ -1,0 +1,109 @@
+img{
+     width: 200px;
+     height: 200px;
+}
+
+img.producto{
+     width: 400px;
+     height: 300px;
+     margin-top: 2%;
+}
+video{
+     width: 400px;
+}
+
+.barra_horizontal li
+{
+    display: inline-block;
+    list-style: none;
+}
+
+li.barra_horizontal
+{
+    list-style: none;
+}
+
+a:link
+{
+     text-decoration: none;
+     font-size: 20px;
+     font-weight: bold;
+     color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+body {
+    background: black
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.navegador{
+    padding: 1.5px;
+    background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, #333), color-stop(100%, #D51B1B));
+    background-image: -moz-linear-gradient(center bottom , #D51B1B, #333);
+    width: 100%;
+}
+
+.titulos{
+    background: #F5F5F8;
+    width: 200px;
+}
+
+.titulos a:link
+{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.titulos a:visited
+{
+    color: black;
+}
+
+.largas{
+    background: #F5F5F8;
+    width: 100%;
+}
+
+p.principal
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+article.texto
+{
+    background: #F5F5F8;
+}
+
+article.multi
+{
+    display: inline-block;
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+p.fin
+{
+    color: white;
+    background: black;
+}
+
+h1.registrar
+{
+    font-size: 0px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+p.usuario{
+    text-align: right;
+    padding-right: 5px;
+}
+

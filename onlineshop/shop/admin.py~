@@ -1,0 +1,8 @@
+from django.contrib import admin
+from shop.models import Bicicletas, Libros, Canciones, Pedido
+
+admin.site.register(Bicicletas)
+admin.site.register(Libros)
+admin.site.register(Canciones)
+
+# Register your models here.

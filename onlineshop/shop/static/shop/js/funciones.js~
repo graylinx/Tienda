@@ -1,0 +1,41 @@
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1);
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function setCookie(cname,cnamevalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname+"="+cnamevalue+"; "+expires + "; path=/";
+}
+
+function guardar(ref, user) {
+    var valor = getCookie(user);
+    valor = valor + ref + "-"
+    setCookie(user, valor, 30);
+    $('#success').slideDown()
+    setTimeout(function(){ $('#success').slideUp(); }, 1000);
+    }
+
+function borrar(ref,user) {
+    var valor = getCookie('carrito');
+    cadena = valor.split("-")
+    for (i = 0; i < cadena.length; i++) {
+        if ( ref == String(cadena[i])){
+            cadena.splice(i,1);
+            valor = cadena.join("-");
+            setCookie("carrito", valor, 30);
+            break;
+        }
+    }
+}
+

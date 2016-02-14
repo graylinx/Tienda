@@ -1,0 +1,54 @@
+img{
+     width: 400px;
+     height: 300px;
+     margin-top: 2%;
+     }
+
+video{
+     width: 400px;
+}
+.selector a:link
+{
+     text-decoration: none;
+     font-size: 20px;
+     font-weight: bold;
+     color: white;
+}
+
+.selector a:visited {
+    color: white;
+}
+
+.selector{
+    padding: 1.5px;
+    background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, #D51B1B), color-stop(100%, #333));
+    background-image: -moz-linear-gradient(center bottom , #D51B1B, #333);
+}
+
+body {
+    background: black url("images/sdr.png");
+}
+
+p.principal
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+article.texto
+{
+    background: #F5F5F8;
+}
+
+article.multi
+{
+    display: inline-block;
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+p.fin
+{
+    color: red;
+    background: black;
+}

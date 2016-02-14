@@ -1,0 +1,39 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'shop/productos.css' %}" />
+
+{% block title %}{% endblock %}
+
+{% block branding %}
+<div class="selector">
+<h2><a href="/shop/">Shop || </a>
+<a href="/shop/bicicletas/">Bicicletas</a>
+<a href="/shop/canciones/">Canciones</a>
+<a href="/shop/libros/">Libros</a></h2> </div>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+
+{% if productos %}
+    <table class="barra_horizontal">
+    {% for item in productos %}
+      <tr class="articulo">
+        <td class="titulos"><a href="/shop/{{ item.id }}/"><img src="{{MEDIA_URL}}{{item.imagen}}"></a></td>
+        <td class="largas">{{ item.descripcion }}</a></td>
+      </tr>
+      <tr>
+        <td class="titulos"><a class ="titulos" href="/shop/{{ bici.id }}/">{{ bici.nombre }}</a></td>
+        <td class="largas">{{ item.precio }}€</a></td>
+      </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No items are available.</p>
+{% endif %}
+
+
+{% block footer %}
+
+{% endblock%}
+

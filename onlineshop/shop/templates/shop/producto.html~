@@ -1,0 +1,64 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'shop/css/style.css' %}" />
+<script src="{% static 'shop/js/jquery-2.0.0.min.js' %}"></script>
+<script src="{% static 'shop/js/ajax.js' %}"></script>
+<script src="{% static 'shop/js/funciones.js' %}"></script>
+
+{% block title %}{% endblock %}
+
+{% block branding %}
+<nav class="navegador">
+  <div class="selector">
+    <h2 class="selector">
+      <a href="/shop/">Inicio</a> ||
+      <a href="/shop/bicicletas/">Bicicletas</a>
+      <a href="/shop/canciones/">Canciones</a>
+      <a href="/shop/libros/">Libros</a>
+      Buscar: <input type="search" id="search" name="search" placeholder="Buscar..." />
+      {% csrf_token %}
+      <ul class= "trans" id="search-results">
+      </ul>
+      {% if user.is_authenticated %}
+        <a class="usuario" href="/shop/logout/"> Salir</a>
+        <a href="/shop/carrito/">Carrito</a></h1>
+        <p class="usuario" >Bienvenido {{ user.get_username }}</p>
+        <p class="usuario" id="success"> Añadido con exito</p>
+      {% else %}
+        <a href="/shop/usuario_nuevo/">Registrate </a>
+        <a class="usuario" href="/shop/ingresar/"> Entrar</a></h1>
+      {% endif %}
+
+    </h2>
+  </div>
+</nav>
+
+{% endblock %}
+
+{% block nav-global %}
+    <article class = multi>
+      <img class="producto" src="{{MEDIA_URL}}{{producto.imagen}}">
+    </article>
+    <article class =multi>
+    {% if producto.clase == "canciones" or producto.clase == "bicicletas" %}
+      <video controls>
+        <source src="{{MEDIA_URL}}{{producto.video}}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    {% endif %}
+    </article>
+  <article class = texto>
+    <p class = principal>Producto: {{producto.nombre}}</p>
+    <p class = secundario>Tipo de {{producto.clase}}: {{producto.tipo}}</p>
+    <p class = secundario>Descripcion: {{producto.descripcion}}</p>
+    <p class = principal>Precio: {{producto.precio}}€</p>
+    {% if user.is_authenticated %}
+    <button onclick="guardar('{{producto.ref}}')">Añadir al carrito</button>
+    {% endif %}
+  </article>
+
+{% endblock %}
+
+{% block footer %}
+  <p class="fin">Copyright © 2015 SDR OnlineShop Inc. Todos los derechos reservados.</p>
+{% endblock%}

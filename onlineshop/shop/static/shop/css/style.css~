@@ -1,0 +1,152 @@
+img{
+     width: 200px;
+     height: auto;
+}
+
+img.producto{
+     width: 400px;
+     height: auto;
+     margin-top: 2%;
+}
+
+img.buscador{
+     width: 40px;
+     height: auto;
+}
+video{
+     width: 400px;
+}
+
+.barra_horizontal li
+{
+    display: inline-block;
+    list-style: none;
+}
+
+table.user
+{
+    color: white;
+}
+
+a:link
+{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+body {
+    background: black;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.navegador{
+    padding: 1.5px;
+    background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, #D51B1B), color-stop(100%, #000));
+    background-image: -moz-linear-gradient(center bottom , #000, #D51B1B);
+    width: 100%;
+}
+
+.titulos{
+    background: #F5F5F8;
+    width: 200px;
+    text-align: center;
+}
+
+.titulos a:link
+{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.titulos a:visited
+{
+    color: black;
+}
+
+.largas{
+    background: #F5F5F8;
+    width: 100%;
+}
+
+p.principal
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+article.texto
+{
+    background: #F5F5F8;
+}
+
+article.multi
+{
+    display: inline-block;
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+h1,p.fin
+{
+    color: white;
+}
+
+
+p.usuario{
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+}
+
+table{
+    color: black;
+}
+
+.trans{
+    margin-top: -0.2%;
+    margin-left:53%;
+    position:absolute;
+    background: black;
+    list-style: none;
+    text-align:left;
+}
+
+h2.selector{
+    text-align: center;
+}
+
+h2.carrito{
+   color: white;
+}
+p.test{
+    color: white;
+}
+
+.pedido{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+ul{
+    text-align:center;
+    margin:14px 7px;
+}
+ul.formulario{
+    color: white;
+}
+
+#success{
+    display: none;
+}

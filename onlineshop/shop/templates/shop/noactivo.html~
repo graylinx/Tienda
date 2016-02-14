@@ -1,0 +1,20 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}" />
+
+{% block title %}{% endblock %}
+{% block branding %}
+<nav class="navegador">
+  <div class="selector">
+    <h2><a href="/shop/">Shop || </a>
+    <a href="/shop/bicicletas/">Bicicletas</a>
+    <a href="/shop/canciones/">Canciones</a>
+    <a href="/shop/libros/">Libros</a></h2></div>
+  <h1 class="registrar"><a href="/shop/usuario/nuevo/">Registrar</a></h1></nav>
+{% endblock %}
+{% block encabezado %}
+    <h1>El usuario no está activo</h1>
+{% endblock %}
+{% block contenido %}
+    <p>Contactar con el administrador, para resolver el problema.</p>
+{% endblock %}

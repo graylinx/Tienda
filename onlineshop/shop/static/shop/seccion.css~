@@ -1,0 +1,58 @@
+img{
+     width: 200px;
+     height: 200px;
+     }
+
+li.barra_horizontal
+{
+    list-style: none;
+}
+
+.selector a:link
+{
+     text-decoration: none;
+     font-size: 20px;
+     font-weight: bold;
+     color: white;
+}
+
+.selector a:visited {
+    color: white;
+}
+
+body {
+    background: black url("images/sdr.png");
+}
+
+.selector{
+    padding: 1.5px;
+    background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, #D51B1B), color-stop(100%, #333));
+    background-image: -moz-linear-gradient(center bottom , #D51B1B, #333);
+}
+
+.titulos{
+    background: #F5F5F8;
+    width: 200px;
+}
+
+.largas{
+    background: #F5F5F8;
+    width: 100%;
+}
+
+.titulos a:link
+{
+    text-decoration: none;
+    color: black;
+}
+
+.titulos a:visited
+{
+    color: black;
+}
+
+p.fin
+{
+    color: red;
+    background: black;
+}
